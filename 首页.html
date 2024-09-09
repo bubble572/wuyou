@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>悟游；首页</title>
+  <style>
+  @import url("html/webfonts/ZITI/stylesheet.css");
+@import url("webfonts/ZITI/stylesheet.css");
+
+    body {
+	font-family: ZITI;
+	padding: 0;
+	background-color: #f4f4f4;
+	margin-left: 40px;
+    }
+    .container {
+	width: 100%;
+	margin: 0px;
+	overflow: hidden;
+	float: none;
+	left: 0pt;
+    }
+ 
+    header {
+	background: #333;
+	color: #fff;
+	padding: 10px 10px;
+	text-align: center;
+	font-family: ZITI;
+	font-size: 20px;
+	width: auto;
+    }
+    nav ul {
+	list-style: none;
+	padding: 40px;
+	background-color: hsla(36,51%,33%,1.00);
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 180px;
+    }
+    nav a {
+	text-decoration: none;
+	color: white;
+	background-color: #7F5D29;
+	padding: 10px;
+    }
+   
+
+}
+	  .image-row {
+        display: flex; /* 启用flex布局 */
+        justify-content: space-around; /* 均匀分布图片 */
+        align-items: center; /* 垂直居中 */
+    }
+    .image-row img {
+        width: auto; /* 每张图片占容器宽度的30% */
+        height: auto; /* 高度自适应 */
+    }
+	  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .image-container {
+	width: 1800px;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	background-color: inherit;
+	font-family: ZITI;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  .image-container:hover img {
+    transform: scale(0);
+  }
+  .image-container:hover .text {
+    opacity: 1;
+  }
+  .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(141,132,118,1.00);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	font-family: ZITI;
+	font-size: 100px;
+  }
+	   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right : 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+  }
+  .sidebar a:hover {
+    background-color: #555;
+  }
+  .main-content {
+    margin-left: 200px;
+    padding: 0px 10px;
+  }
+ .footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px 20px 20px;
+	position: ;
+	bottom: 0;
+	width: 100%;
+	font-family: inherit;
+        }
+  .地图.html {
+}
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <h1>悟游：传统文化</h1>
+  </header>
+
+<div class="container">
+  <div class="image-container">
+	<a href="地图.html">  
+    <img src="tu1.jpg" alt="Image 1">
+	  <div class="text">悟宇</div>
+	  </a>
+	</div>
+  <div class="image-container"><a href="wuyue.html">
+    <img src="tu2.jpg" alt="Image 2">
+	  <div class="text">悟乐</div></a>
+	  
+  </div>
+  <div class="image-container">
+	  <a href="shijing.html">
+    <img src="tu3.jpg" alt="Image 3">
+	 
+    <div class="text" style="margin-left: 5px">悟空</div></a>
+  </div>
+</div>
+ <div class="footer">
+        <p>图片版权所有 © 黑神话 悟空 官方网站</p>
+    </div>
+
+  
+
+
+</body>
+</html>

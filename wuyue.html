@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Captions</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+	@import url("webfonts/ZITI/stylesheet.css");
+/* styles.css */
+/* styles.css */
+		    body {
+	font-family: Arial, sans-serif;
+	padding: 0;
+	background: #f4f4f4;
+	margin-top: 0px;
+    }
+    .header, .footer {
+	background: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	font-family: ZITI;
+	font-size: x-large;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 允许图片换行 */
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: calc(50% - 40px); /* 减去的间距是为了防止图片之间相互重叠 */
+    margin-bottom: 20px;
+    margin-right: 20px; /* 为每行的图片添加右边距 */
+}
+
+.image-container:nth-child(2n) {
+    margin-right: 0; /* 每行的最后一张图片不需要右边距 */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    visibility: hidden; /* 默认隐藏文本框 */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.image-container:hover .caption {
+    visibility: visible; /* 悬浮时显示文本框 */
+    opacity: 1;
+}
+	</style>
+</head>
+<body> <div class="header">
+    <h1>悟乐&nbsp;</h1><nav><a href="首页.html">首页</a></nav>
+  </div>
+    <div class="gallery">
+        <div class="image-container"><a href="yungong.html">
+            <img src="bj.jpg" alt="Image 1">
+            <div class="caption">云宫迅音</div></a>
+        </div>
+        <div class="image-container"><a href="shanbei.html">
+            <img src="yin2.jpg" alt="Image 2">
+            <div class="caption">陕北说书</div></a>
+        </div>
+        <div class="image-container"><a href="wangsheng.html">
+            <img src="yin4.jpg" alt="Image 3">
+            <div class="caption">往生咒</div></a>
+        </div>
+        <div class="image-container"><a href="pi.html">
+            <img src="yin3.jpg" alt="Image 4">
+            <div class="caption">屁</div></a>
+        </div>
+    </div>
+	  <div class="footer">
+    <p>&copy;以下所有图片，视频，音乐素材皆来源于黑神话悟空官方 </p>
+  </div>
+</body>
+</html>

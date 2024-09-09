@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css"><style>
+    @import url("webfonts/ZITI/stylesheet.css");
+	<!-- 在<body>标签内的合适位置，例如在<header>或<nav>标签内 -->
+	/* 可以直接添加到<head>标签内的<style>中 */
+.top-nav {
+    position: absolute;
+    right: 20px; /* 距离右侧的距离 */
+    top: 20px; /* 距离顶部的距离 */
+    z-index: 1000; /* 确保导航在页面最上层 */
+}
+
+.top-nav-link {
+    color: #333; /* 文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    padding: 5px 10px; /* 内边距 */
+    border-radius: 5px; /* 边框圆角 */
+    background-color: #f8f8f8; /* 背景颜色 */
+    transition: background-color 0.3s; /* 背景颜色变化的过渡效果 */
+}
+
+.top-nav-link:hover {
+    background-color: #eaeaea; /* 鼠标悬停时的背景颜色 */
+}
+
+
+    /* styles.css */
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #8A909A;
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(127,149,164,1.00) 0.35%,rgba(67,77,84,1.00) 6.56%,rgba(44,89,121,1.00) 11.05%,rgba(96,64,6,1.00) 12.78%,rgba(86,91,90,1.00) 15.89%,rgba(102,96,87,1.00) 17.27%,rgba(108,92,75,1.00) 18.31%,rgba(108,92,75,1.00) 18.31%,rgba(166,123,78,1.00) 19.69%,rgba(45,103,146,1.00) 19.69%,rgba(46,106,150,1.00) 21.07%,rgba(179,160,128,1.00) 23.14%,rgba(28,94,142,1.00) 25.91%,rgba(106,55,19,1.00) 28.32%,rgba(105,94,81,1.00) 31.43%,rgba(115,100,57,1.00) 34.54%,rgba(37,66,86,1.00) 48.01%,rgba(84,90,77,1.00) 57.34%,rgba(123,111,70,1.00) 64.94%,rgba(111,83,56,1.00) 77.03%,rgba(123,99,78,1.00) 78.07%,rgba(117,130,140,1.00) 84.97%,rgba(91,83,72,1.00) 86.01%,rgba(75,60,37,1.00) 87.39%,rgba(72,98,117,1.00) 100%);
+	background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(127,149,164,1.00) 0.35%,rgba(67,77,84,1.00) 6.56%,rgba(44,89,121,1.00) 11.05%,rgba(96,64,6,1.00) 12.78%,rgba(86,91,90,1.00) 15.89%,rgba(102,96,87,1.00) 17.27%,rgba(108,92,75,1.00) 18.31%,rgba(108,92,75,1.00) 18.31%,rgba(166,123,78,1.00) 19.69%,rgba(45,103,146,1.00) 19.69%,rgba(46,106,150,1.00) 21.07%,rgba(179,160,128,1.00) 23.14%,rgba(28,94,142,1.00) 25.91%,rgba(106,55,19,1.00) 28.32%,rgba(105,94,81,1.00) 31.43%,rgba(115,100,57,1.00) 34.54%,rgba(37,66,86,1.00) 48.01%,rgba(84,90,77,1.00) 57.34%,rgba(123,111,70,1.00) 64.94%,rgba(111,83,56,1.00) 77.03%,rgba(123,99,78,1.00) 78.07%,rgba(117,130,140,1.00) 84.97%,rgba(91,83,72,1.00) 86.01%,rgba(75,60,37,1.00) 87.39%,rgba(72,98,117,1.00) 100%);
+	background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(127,149,164,1.00) 0.35%,rgba(67,77,84,1.00) 6.56%,rgba(44,89,121,1.00) 11.05%,rgba(96,64,6,1.00) 12.78%,rgba(86,91,90,1.00) 15.89%,rgba(102,96,87,1.00) 17.27%,rgba(108,92,75,1.00) 18.31%,rgba(108,92,75,1.00) 18.31%,rgba(166,123,78,1.00) 19.69%,rgba(45,103,146,1.00) 19.69%,rgba(46,106,150,1.00) 21.07%,rgba(179,160,128,1.00) 23.14%,rgba(28,94,142,1.00) 25.91%,rgba(106,55,19,1.00) 28.32%,rgba(105,94,81,1.00) 31.43%,rgba(115,100,57,1.00) 34.54%,rgba(37,66,86,1.00) 48.01%,rgba(84,90,77,1.00) 57.34%,rgba(123,111,70,1.00) 64.94%,rgba(111,83,56,1.00) 77.03%,rgba(123,99,78,1.00) 78.07%,rgba(117,130,140,1.00) 84.97%,rgba(91,83,72,1.00) 86.01%,rgba(75,60,37,1.00) 87.39%,rgba(72,98,117,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(127,149,164,1.00) 0.35%,rgba(67,77,84,1.00) 6.56%,rgba(44,89,121,1.00) 11.05%,rgba(96,64,6,1.00) 12.78%,rgba(86,91,90,1.00) 15.89%,rgba(102,96,87,1.00) 17.27%,rgba(108,92,75,1.00) 18.31%,rgba(108,92,75,1.00) 18.31%,rgba(166,123,78,1.00) 19.69%,rgba(45,103,146,1.00) 19.69%,rgba(46,106,150,1.00) 21.07%,rgba(179,160,128,1.00) 23.14%,rgba(28,94,142,1.00) 25.91%,rgba(106,55,19,1.00) 28.32%,rgba(105,94,81,1.00) 31.43%,rgba(115,100,57,1.00) 34.54%,rgba(37,66,86,1.00) 48.01%,rgba(84,90,77,1.00) 57.34%,rgba(123,111,70,1.00) 64.94%,rgba(111,83,56,1.00) 77.03%,rgba(123,99,78,1.00) 78.07%,rgba(117,130,140,1.00) 84.97%,rgba(91,83,72,1.00) 86.01%,rgba(75,60,37,1.00) 87.39%,rgba(72,98,117,1.00) 100%);
+
+}
+
+.music-player {
+	width: 100%;
+	max-width: 800px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+	background-image: url(bj.jpg);
+}
+
+.album-art img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.player-controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.player-controls button:hover {
+    background-color: #ccc;
+}
+
+.song-info {
+	margin: 20px 0;
+	font-family: ZITI;
+	font-size: 70px;
+	color: hsla(0,0%,100%,1.00);
+}
+
+.progress-bar {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#song-slider {
+	width: 100%;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 5px;
+	border-radius: 5px;
+	background-color: #8D8476;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+
+#song-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+}
+
+#song-slider:active::-webkit-slider-thumb {
+    background: #45a049;
+}     .top-nav {
+            position: absolute;
+            right: 20px; /* 距离右侧的距离 */
+            top: 20px; /* 距离顶部的距离 */
+            z-index: 1000; /* 确保导航在页面最上层 */
+        }
+        .top-nav-link {
+            color: #333; /* 文字颜色 */
+            text-decoration: none; /* 去除下划线 */
+            font-size: 16px; /* 字体大小 */
+            font-weight: bold; /* 字体加粗 */
+            padding: 5px 10px; /* 内边距 */
+            border-radius: 5px; /* 边框圆角 */
+            background-color: #f8f8f8; /* 背景颜色 */
+            transition: background-color 0.3s; /* 背景颜色变化的过渡效果 */
+        }
+        .top-nav-link:hover {
+            background-color: #eaeaea; /* 鼠标悬停时的背景颜色 */
+        }
+        /*
+    </style>
+</head>
+<body>
+    <div class="music-player">
+        <div class="album-art"> </div>
+        <div class="player-controls">
+           <a href="mv1.html" ><button class="prev">mv&nbsp;</button></a>
+            <button class="play">Play</button>
+               <button class="next" title="在游戏《黑神话：悟空》中，《云宫迅音》被用作背景音乐，为游戏增添了浓厚的文化氛围和史诗感。游戏由杭州游科互动科技有限公司开发，是一款以《西游记》为背景的单机动作角色扮演游戏。《云宫迅音》在游戏中的应用，不仅让玩家在视觉和操作上体验到游戏的魅力，还通过音乐将玩家的情感与游戏的世界观紧密相连。
+
+游戏中的《云宫迅音》经过重新编曲，保留了原曲的精髓，同时加入了更符合现代审美的元素，使得这首经典音乐在新时代的游戏中焕发出新的生命力。它不仅唤起了玩家对经典电视剧的美好回忆，也让海外玩家通过游戏这一媒介，对中国传统文化有了更深入的了解和认识。">简介</button>
+        </div>
+        <div class="song-info">
+          <h2 id="song-title">云宫迅音</h2>
+            <p id="song-artist"></p>
+        </div>
+        <div class="progress-bar">
+            <input type="range" id="song-slider" value="0" step="1" min="0" max="100">
+        </div>
+    </div>
+	<nav class="top-nav">
+    <a href="wuyue.html" class="top-nav-link">上一页</a>
+</nav>
+    <script src="script.js">// script.js
+let isPlaying = false;
+
+document.querySelector('.play').addEventListener('click', function() {
+    if (isPlaying) {
+        pauseSong();
+    } else {
+        playSong();
+    }
+    isPlaying = !isPlaying;
+});
+
+function playSong() {
+    document.querySelector('.play').textContent = 'Pause';
+    // 这里添加音乐播放的代码
+}
+
+function pauseSong() {
+    document.querySelector('.play').textContent = 'Play';
+    // 这里添加音乐暂停的代码
+}
+
+// 这里添加上一首和下一首的逻辑</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山西美食</title>
+    <link rel="stylesheet" href="styles.css">
+	/* styles.css */<style>
+	@import url("webfonts/ZITI/stylesheet.css");
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #8D8476;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	font-family: ZITI;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+	padding: 20px;
+	margin: 20px;
+	background-color: #fff;
+	font-family: ZITI;
+}
+
+.dish-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dish {
+    width: 30%;
+    text-align: center;
+}
+
+.dish img {
+    max-width: 100%;
+    height: auto;
+}
+
+.restaurant-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.restaurant {
+    width: 30%;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+	</style>
+</head>
+<body>
+    <header>
+        <h1>山西美食</h1>
+        <nav>
+            <ul>
+                <li><a href="地图.html">地图</a></li>
+                <li><a href="lvyou.html">上一页</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduction">
+        <h2>山西美食介绍</h2>
+        <p>山西，位于中国北部，以其丰富的历史文化遗产和独特的美食而闻名。山西菜，又称晋菜，是中国八大菜系之一，以其独特的风味和烹饪技艺著称。</p>
+    </section>
+
+    <section id="dishes">
+        <h2>特色菜品</h2>
+        <div class="dish-grid">
+            <div class="dish">
+                <img src="dao.jpg" alt="山西刀削面">
+                <h3>刀削面</h3>
+                <p>刀削面是山西最著名的面食之一，以其独特的削面技巧和丰富的汤料而闻名。</p>
+            </div>
+            <div class="dish">
+                <img src="cu.jpg" alt="香姑包子">
+                <h3>山西老陈醋</h3>
+                <p>山西是中国四大名醋之一的老陈醋的产地，以其酸味醇厚、回味悠长而著称。</p>
+            </div>
+            <!-- 更多菜品 -->
+        </div>
+    </section>
+
+    <section id="restaurants">
+        <h2>推荐餐馆</h2>
+        <div class="restaurant-grid">
+            <div class="restaurant">
+                <h3>晋阳饭店</h3>
+                <p>地址：位于太原市五一广场并州路口，以过油肉等传统晋菜闻名，是太原人喜爱的老馆子之一 
+。.</p>
+                
+            </div>
+            <!-- 更多餐馆 -->
+        </div>
+    </section>
+
+    <section id="contact">
+       
+    </section>
+
+    <footer>
+        <p>&copy; 2024 </p>
+    </footer>
+</body>
+</html>

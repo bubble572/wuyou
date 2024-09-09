@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游戏实景</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url("webfonts/ZITI/stylesheet.css");
+    <nav>
+      <a href="首页.html">首页</a>
+      
+      
+    </nav>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      background: #f4f4f4;
+      margin-top: 0px;
+    }
+    .header, .footer {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-family: ZITI;
+      font-size: x-large;
+    }
+    .container {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .main-content {
+      padding: 20px;
+      background: #fff;
+      margin-top: 20px;
+    }
+ .carousel {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-images img {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
+
+.carousel-images img:first-child {
+  display: block;
+}
+
+.carousel-images img:first-child {
+  display: block;
+}
+	   .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  margin-top: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+}
+
+    .prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px; /* 距离左侧的距离 */
+}
+
+.next {
+  right: 10px; /* 距离右侧的距离 */
+}
+	 
+  </style>
+	</head>
+<body>
+  <div class="header">
+    <h1>游戏实景&nbsp;</h1><nav><a href="首页.html">首页</a></nav>
+  </div>
+	  
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="11.jpg" alt="Image 1">
+      <img src="22.jpg" alt="Image 2">
+		      <img src="111.jpg" alt="Image 2">
+      <img src="33.jpg" alt="Image 3">
+      <img src="44.jpg" alt="Image 4">      <img src="222.jpg" alt="Image 2">
+      <img src="55.jpg" alt="Image 5" >
+      <img src="66.jpg" alt="Image 6">      <img src="333.jpg" alt="Image 2">
+      <img src="77.jpg" alt="Image 7">
+      <img src="88.jpg" alt="Image 8">        <img src="444.jpg" alt="Image 2">
+      <img src="99.jpg" alt="Image 9">      <img src="555.jpg" alt="Image 2">
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+  <div class="main-content"> </div>
+  <div class="footer">
+    <p>&copy;图片版权所有 黑神话悟空 官方网站 </p>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex >= slides.length) {slideIndex = 0} // Reset to first slide
+      slides[slideIndex].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+
+    function changeSlide(n) {
+      let slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
+      slideIndex += n;
+      if (slideIndex >= slides.length) {slideIndex = 0} // Loop back to the first slide
+      if (slideIndex < 0) {slideIndex = slides.length - 1} // Loop back to the last slide
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+  </script>
+</body>
+</html>

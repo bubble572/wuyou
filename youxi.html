@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>悟游大冒险</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+	@import url("webfonts/ZITI/stylesheet.css");
+
+	body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f0e68c; /* 淡黄色背景 */
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url(hei1.jpg);
+}
+
+.game-container {
+	text-align: center;
+	background-color: rgba(148,118,72,1.00); /* 金色半透明背景 */
+	border: 1px solid #ff4500; /* 红色边框 */
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	font-family: ZITI;
+	color: hsla(0,0%,0%,1.00);
+}
+
+header h1 {
+	color: #3B2A11; /* 红色标题 */
+	font-size: 2.5em;
+	margin-bottom: 20px;
+	background-color: hsla(36,51%,45%,0.96);
+}
+
+.intro p {
+    color: #8b4513; /* 棕色文字 */
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.start-button {
+	background-color: #7F5D29; /* 红色按钮 */
+	color: hsla(351,21%,67%,1.00);
+	font-size: 1.5em;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.start-button:hover {
+	background-color: #e53935; /* 深红色按钮 hover 效果 */
+	background-image: url(hei1.jpg);
+}
+
+footer {
+    margin-top: 20px;
+    color: #8b4513; /* 棕色文字 */
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #8b4513;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff4500; /* 红色链接 hover 效果 */
+}
+	</style>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>悟游大冒险</h1>
+        </header>
+        <section class="intro">
+            <p>加入孙悟空的冒险之旅，穿越难关，打败妖怪，取得真经！</p >
+        </section>
+        <button class="start-button">开始游戏</button>
+        <footer>
+            <p>设置 | 成就 | 排行榜 | 关于我们</p >
+            <p>© 2024 悟游</p >
+        </footer>
+    </div>
+</body>
+</html>

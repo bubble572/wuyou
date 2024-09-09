@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频播放器</title>
+    <style>
+		.top-nav {
+    position: absolute;
+    right: 20px; /* 距离右侧的距离 */
+    top: 20px; /* 距离顶部的距离 */
+    z-index: 1000; /* 确保导航在页面最上层 */
+}
+
+.top-nav-link {
+    color: #333; /* 文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    padding: 5px 10px; /* 内边距 */
+    border-radius: 5px; /* 边框圆角 */
+    background-color: #f8f8f8; /* 背景颜色 */
+    transition: background-color 0.3s; /* 背景颜色变化的过渡效果 */
+}
+
+.top-nav-link:hover {
+    background-color: #eaeaea; /* 鼠标悬停时的背景颜色 */
+}
+
+
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #8D8476;
+        }
+        .video-container {
+            width: 80%;
+            max-width: 1000px; /* 您可以根据需要调整视频播放器的最大宽度 */
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body><nav class="top-nav">
+    <a href="wangsheng.html" class="top-nav-link">上一页</a>
+</nav>
+    <div class="video-container">
+        <video controls>
+            <source src="wangsheng.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 video 标签。
+        </video>
+    </div>
+</body>
+</html>

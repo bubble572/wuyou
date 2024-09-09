@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地图实景</title>
+  <style>
+ @import url("webfonts/ZITI/stylesheet.css");
+	  .carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images img {
+  width: 60%;
+  
+	   display: flex; /* 使用Flexbox布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+};
+}
+
+.carousel-images img:first-child {
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}.prev {
+  left: 10px; /* 将上一个按钮放置在左侧 */
+}
+
+.next {
+  right: 10px; /* 将下一个按钮放置在右侧 */
+}
+
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+    body {
+	font-family: Arial, sans-serif;
+	padding: 0;
+	background: #f4f4f4;
+	margin-top: 0px;
+    }
+    .header, .footer {
+	background: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	font-family: ZITI;
+	font-size: x-large;
+    }
+    .container {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .main-content {
+      padding: 20px;
+      background: #fff;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>悟空&nbsp;</h1>
+	  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Carousel</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="carousel">
+  <div class="carousel-images">
+    <img src="11.jpg" alt="Image 1">
+  	      <img src="111.jpg" alt="Image 3">
+
+	  <img src="22.jpg" alt="Image 2">	      <img src="222.jpg" alt="Image 3">
+
+    <img src="33.jpg" alt="Image 3">
+    <img src="44.jpg" alt="Image 3">	      <img src="333.jpg" alt="Image 3">
+
+    <img src="55.jpg" alt="Image 3">
+    <img src="66.jpg" alt="Image 3">
+    <img src="77.jpg" alt="Image 3">
+    <img src="88.jpg" alt="Image 3">	      <img src="444.jpg" alt="Image 3">
+
+    <img src="99.jpg" alt="Image 3">
+	
+
+    <!-- Add as many images as you like -->
+  </div>
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+  </div>
+	<div class="main-content"> </div>
+ 
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1} // Reset to first slide
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+
+function changeSlide(n) {
+  let slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
+  slideIndex += n;
+  if (slideIndex > slides.length) {slideIndex = 1} // Loop back to the first slide
+  if (slideIndex < 1) {slideIndex = slides.length} // Loop back to the last slide
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+</script>  <div class="footer">
+    <p>&copy; 2024 悟游 </p>
+  </div>
+</body>
+</html>
